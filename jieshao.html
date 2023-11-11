@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="zh" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>官网介绍</title>
+  <meta name="Description" content="Home Page of iissnan">
+  <meta name="color-scheme" content="dark light">
+  <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+  <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+  <link rel="shortcut icon" href="./images/xiao.jpg" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="./css/basic.css">
+  
+  <style>
+  body{
+    background-image: url(./images/shi.png);
+}
+		.box1 {
+	float: right;
+	height: 200px;
+	width: 300px;
+			}
+			.loading{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin:
+            position: relative;
+            border:5px solid lightgreen;
+            -webkit-animation: turn 2s linear infinite;
+        }
+        .loading span{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: lightgreen;
+            position: absolute;
+            left: 50%;
+            margin-top: -15px;
+            margin-left: -15px;
+            
+        }
+        @-webkit-keyframes changeBgColor{
+            0%{
+                background: lightgreen;
+            }
+            100%{
+                background: lightblue;
+            }
+        }
+        @-webkit-keyframes turn{
+            0%{
+                -webkit-transform: rotate(0deg);
+                border-color: lightgreen;
+            }
+            100%{
+                -webkit-transform: rotate(360deg);
+                border-color: lightblue;
+            }
+        }
+.oxh.met-web body .met-foot-info.border-top1 {
+	color: #0FF;
+}
+ .box1{
+    height: 1080px;
+    width: 1920px;
+    background-image: url();
+    background-repeat: no-repeat;
+ }
+
+ 
+:root {
+    --color-rect: #f6ed8d;
+    --color-circle: #7de3c8;
+    --color-notching: #ff1493;
+    --color-notching2: #f9d9e7;
+    --color-parallelogram: #03f463;
+}
+#content {
+    width: 360px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+}
+
+.g-multiple {
+  padding-top: 5px;
+    width: 100px;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.btn {
+ 
+    flex-shrink: 0;
+    width: 160px;
+    height: 64px;
+    line-height: 55px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    // filter: drop-shadow(0 0 5px #000);
+
+    &:hover {
+        top: -1px;
+    }
+    &:active {
+        top: 1px;
+    }
+
+    &.rect {
+        background: var(--color-rect);
+    }
+
+    &.circle {
+        border-radius: 64px;
+        background: var(--color-circle);
+    }
+    
+    &.parallelogram {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -20px;
+            bottom: 0;
+            right: -20px;
+            z-index: -1;
+            background: var(--color-parallelogram);
+            transform: skewX(15deg);
+        }
+    }
+    
+    &.trapezoid {
+        &::after {
+          content:"";
+          position: absolute;
+          top: 0; right: 0; bottom: 0; left: 0;
+          transform: perspective(40px) scaleY(1.3) rotateX(10deg);
+          transform-origin: bottom;
+          background: #ff9800;
+          z-index:-1;
+        }
+    }
+
+    &.notching {
+        background: 
+            linear-gradient(135deg, transparent 10px, #ff1493 0)top left,
+            linear-gradient(-135deg, transparent 10px, #ff1493 0) top right,
+            linear-gradient(-45deg, transparent 10px, #ff1493 0) bottom right,
+            linear-gradient(45deg, transparent 10px, #ff1493 0) bottom left;
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+    }
+    
+    &.diamond {
+        background: 
+            linear-gradient(135deg, transparent 22px, #bd1493 0)top left,
+            linear-gradient(-135deg, transparent 22px, #bd1493 0) top right,
+            linear-gradient(-45deg, transparent 22px, #bd1493 0) bottom right,
+            linear-gradient(45deg, transparent 22px, #bd1493 0) bottom left;
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    &.clip-notching {
+        background: linear-gradient(
+            45deg,
+            #f9d9e7,
+            #ff1493
+        );
+        clip-path: polygon(
+            15px 0,
+            calc(100% - 15px) 0,
+            100% 15px,
+            100% calc(100% - 15px),
+            calc(100% - 15px) 100%,
+            15px 100%,
+            0 calc(100% - 15px),
+            0 15px
+        );
+    }
+
+    &.arrow {
+        background: linear-gradient(
+                    -135deg,
+                    transparent 22px,
+                    #04e6fb 22px,
+                    #9006fb 100%
+                )
+                top right,
+            linear-gradient(
+                    -45deg,
+                    transparent 22px,
+                    #04e6fb 22px,
+                    #9006fb 100%
+                )
+                bottom right;
+        background-size: 100% 50%;
+        background-repeat: no-repeat;
+    }
+
+    &.two-arrow {
+        background: 
+            linear-gradient( -135deg, transparent 22%, #04e6fb 22%, #9006fb 78%, transparent 0) top right,
+            linear-gradient(-45deg, transparent 22%, #04e6fb 22%, #9006fb 78%, transparent 0) bottom right;
+        background-size: 100% 50%;
+        background-repeat: no-repeat;
+    }
+
+    &.clip-arrow {
+      
+        background: linear-gradient(45deg, #04e6fb, #65ff9a);
+        clip-path: polygon(
+            0 0,
+            30px 50%,
+            0 100%,
+            calc(100% - 30px) 100%,
+            100% 50%,
+            calc(100% - 30px) 0
+        );
+    }
+
+    &.inset-circle {
+        background-size: 70% 70%;
+        background-image: radial-gradient(
+                circle at 100% 100%,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            ),
+            radial-gradient(
+                circle at 0 0,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            ),
+            radial-gradient(
+                circle at 100% 0,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            ),
+            radial-gradient(
+                circle at 0 100%,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            );
+        background-repeat: no-repeat;
+        background-position: right bottom, left top, right top, left bottom;
+    }
+
+    &.mask-inset-circle {
+        background: linear-gradient(45deg, #2179f5, #e91e63);
+        mask: radial-gradient(
+                circle at 100% 100%,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            ),
+            radial-gradient(
+                circle at 0 0,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            ),
+            radial-gradient(
+                circle at 100% 0,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            ),
+            radial-gradient(
+                circle at 0 100%,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            );
+        mask-repeat: no-repeat;
+        mask-position: right bottom, left top, right top, left bottom;
+        mask-size: 70% 70%;
+    }
+
+    &.skew {
+        position: relative;
+        width: 120px;
+        text-indent: 10px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: orange;
+            transform: skewX(15deg);
+            border-radius: 10px;
+            z-index: -1;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -13px;
+            width: 100px;
+            height: 64px;
+            border-radius: 10px;
+            background: orange;
+            z-index: -1;
+        }
+    }
+    
+    &.skew2 {
+        width: 120px;
+        position: relative;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, orange, #ff1800);
+            transform: skewX(15deg);
+            border-radius: 10px;
+            z-index: -1;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -13px;
+            width: 100px;
+            height: 64px;
+            border-radius: 10px;
+            background: orange;
+            z-index: -1;
+        }
+    }
+    
+    &.outside-circle {
+        position: relative;
+        background: #e91e63;
+        border-radius: 10px 10px 0 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: -20px;
+            bottom: 0;
+            background: #000;
+            background:radial-gradient(circle at 0 0, transparent 20px, #e91e63 21px);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -20px;
+            bottom: 0;
+            background: #000;
+            background:radial-gradient(circle at 100% 0, transparent 20px, #e91e63 21px);
+        }
+    }
+}
+
+</style>
+  
+</head>
+
+<body>
+  <div style="position:absolute;z-index: -1;">
+    <canvas id="canvas"></canvas>
+    </div>
+<header class='met-head' m-id='met_head' m-type="head_nav">
+<nav class="navbar navbar-default box-shadow-none met-nav">
+    <div class="container">
+        <div class="row">
+            <div class='qwe'>
+              <h1 hidden>&nbsp;</h1>
+                                    <div class="navbar-header pull-xs-left">
+                    <a href="" class="met-logo vertical-align block pull-xs-left" title="Logo关键词">
+                        <div class="vertical-align-middle">
+                          <div align="left">
+                            <div class="loading">
+    <span></span></div>
+                          </div>
+                    </div>
+                    </a>
+                    <img src="./images/nanxi.jpg">
+                </div>
+                <button type="button" class="navbar-toggler hamburger hamburger-close collapsed p-x-5 p-y-0 met-nav-toggler" data-target="#met-nav-collapse" data-toggle="collapse"></button>
+          </div>
+            <div class="collapse navbar-collapse navbar-collapse-toolbar pull-md-right p-0" id='met-head-user-collapse'>
+          </div>
+            <div class="collapse navbar-collapse navbar-collapse-toolbar pull-md-right p-0" id="met-nav-collapse">
+                <ul class="nav navbar-nav navlist">
+                    <li class='nav-item'>
+                        <a href="frit.html" title="网站首页" class="nav-link
+                                                        active
+                                                    ">网站首页</a>
+                    </li>
+                                                                        <li class="nav-item dropdown m-l-10">
+                                                        <a
+                            href="guanyu.html"
+                            title="关于我们"
+                            target='_self'                                class="nav-link dropdown-toggle "
+                            data-toggle="dropdown" data-hover="dropdown"
+                        >
+                                                    <span style='font-size:14px ;'>关于我们</span></span></a>
+                                                        <div class="dropdown-menu dropdown-menu-right animate animate-reverse"></div>
+                    </li>
+                                                                                                <li class="nav-item dropdown m-l-10">
+                                                        <a
+                            href="jieshao.html"
+                            title="官网介绍"
+                            target='_self'                                class="nav-link dropdown-toggle "
+                            data-toggle="dropdown" data-hover="dropdown"
+                        >
+                                                   <span style='font-size:14px ;'>官网介绍</span></a>
+                                                        <div class="dropdown-menu dropdown-menu-right animate animate-reverse"></div>
+                    </li>
+                                                                                                <li class="nav-item dropdown m-l-10">
+                                                        <a
+                            href="nxzl.html"
+                            title=""
+                            target='_self'                                class="nav-link dropdown-toggle "
+                            data-toggle="dropdown" data-hover="dropdown"
+                        >
+                    <span style='font-size:14px ;'>星之鸣资料</span></a></li>
+                                                                                                <li class="nav-item dropdown m-l-10">
+                                                        <a
+                            href="xiaokl.html"	
+                            title=""
+                            target='_self'                                class="nav-link dropdown-toggle "
+                            data-toggle="dropdown" data-hover="dropdown"
+                        >
+                    <span style='font-size:14px ;'>Google恐龙</span></a></li>
+                    <div class="g-multiple">
+                <li class="nav-item dropdown m-l-10">
+                 
+                                                        <a
+                            href="caidan.html"
+                            title=""
+                            target='_self'                              
+                        >
+                    <span style='font-size:14px ;'>
+                   
+                      <div class="btn clip-arrow">GitHub</div>
+                    </div></span></a></li>
+              </ul>
+                <div class="metlang m-l-15 pull-md-right"></div>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>
+<main>
+<!-- 产品区块 --><!-- 简介区块 --><!-- 文章区块 --><!-- 图片区块 --></main>
+<footer class='met-foot-info border-top1' m-id='met_foot' m-type="foot">
+  </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae53144d9b0b29e4dce621c970c016e0";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  	
+</div>
+</div>
+
+    
+</div>
+
+  <div class="vi">
+    <h1 class="animate-slide-in-down">Hello！</h1>
+    <div class="quote">
+      <span class="quote-line quote-line-start animate-slide-in-left"></span>
+      <span class="quote-icon quote-icon-start animate-slide-in-down">
+        <i class="icon icon-quotes-left"></i>
+      </span>
+      <p class="quote-content animate-slide-in-down">欢迎来到这里，说明你是极少数的人，这个网站是我与茶鸣闲时无聊开发的</p>
+      <p class="quote-author animate-slide-in-down">星之鸣网络社团—— <em>酸奶</em></p>
+      <span class="quote-icon quote-icon-end animate-slide-in-up">
+        <i class="icon icon-quotes-right"></i>
+      </span>
+      <span class="quote-line quote-line-end animate-slide-in-right"></span>
+    </div>
+   
+    <div class="links">
+      <a href="" class="animate-slide-in-down">GitHub</a>
+      <a href="" class="animate-slide-in-down">Notes</a>
+      <a href="" class="animate-slide-in-down">DouBan</a>
+      <a href="" class="animate-slide-in-down">WeiBo</a>
+    </div>
+    <div class="location">
+      <span class="location-icon animate-slide-in-up">
+        <i class="icon icon-map-pin"></i>
+      </span>
+      <span class="location-text animate-slide-in-down">suan nai - China</span>
+    </div>
+    <div class="relocating">
+      Navigating to: <span class="relocate-location"></span>...
+    </div>
+  </div>
+
+  <script src="./javascript/jquery-3.3.1.min.js"></script>
+  <script>
+    $(function () {
+      var SLIDE_IN_DOWN = { opacity: 1, top: 0 };
+      var SLIDE_IN_UP = { opacity: 1, bottom: 0 };
+      var SLIDE_IN_LEFT = { left: 0 };
+      var SLIDE_IN_RIGHT = { right: 0 };
+
+      registerCheatCode();
+      executeAnimations();
+
+      function executeAnimations() {
+        $.when()
+          .then(animateTitle)
+          .then(animateQuote)
+          .then(animateLinks)
+          .then(animateLocation);
+      }
+
+      function animateTitle() {
+        return animate('h1', SLIDE_IN_DOWN);
+      }
+
+      function animateQuote() {
+        return $.when(
+          animate('.quote-line-start', SLIDE_IN_LEFT),
+          animate('.quote-line-end',SLIDE_IN_RIGHT),
+          animate('.quote-icon-start', SLIDE_IN_DOWN),
+          animate('.quote-icon-end', SLIDE_IN_UP)
+        )
+          .then(function () {
+            return animate('.quote-content', SLIDE_IN_DOWN);
+          })
+          .then(function () {
+            return animate('.quote-author', SLIDE_IN_DOWN);
+          });
+      }
+
+      function animateLinks() {
+        var DELAY_STEP = 200;
+        var elements = $('.links a');
+        var concurrent = $.makeArray(elements)
+          .map(function (element, index) {
+            return animate(element, SLIDE_IN_DOWN, index * DELAY_STEP);
+          });
+
+        return $.when.apply($, concurrent);
+      }
+
+      function animateLocation() {
+        return $.when(
+          animate('.location-icon', SLIDE_IN_UP),
+          animate('.location-text', SLIDE_IN_DOWN)
+        );
+      }
+
+      function animate(selector, properties, delay, options) {
+        delay = delay || 0;
+        return $(selector).delay(delay)
+          .animate(properties, options)
+          .promise();
+      }
+
+      function registerCheatCode() {
+        $(document.body).on('keydown', function (event) {
+          var KEY_B = 66;
+
+          if (event.which === KEY_B) {
+            $('.relocate-location').text('Bookmark Page');
+            $('.relocating').css('opacity', 1);
+
+            window.setTimeout(function () {
+              window.location.href = '/bookmarks.html';
+            }, 1000);
+          }
+        });
+      }
+    });
+  </script>
+  
+</script>
+  	
+<script src="./index.redirect.js"></script>
+<script type="text/javascript">
+  const canvas = document.getElementById('canvas')
+  const ctx = canvas.getContext('2d')
+  let width = window.innerWidth
+  let height = window.innerHeight
+ 
+  let dotsNum = 20 // 点的数量
+  let radius = 1 // 圆的半径，连接线宽度的一半
+  let fillStyle = 'rgba(255,255,255,0.5)' // 点的颜色
+  let lineWidth = radius * 2
+  let connection = 120 // 连线最大距离
+  let followLength = 80 // 鼠标跟随距离
+ 
+  let dots = []
+  let animationFrame = null
+  let mouseX = null
+  let mouseY = null
+ 
+  function addCanvasSize () { // 改变画布尺寸
+    width = window.innerWidth
+    height = window.innerHeight
+    canvas.width = width
+    canvas.height = height
+    ctx.clearRect(0, 0, width, height)
+    dots = []
+    if (animationFrame) window.cancelAnimationFrame(animationFrame)
+    initDots(dotsNum)
+    moveDots()
+  }
+ 
+  function mouseMove (e) {
+    mouseX = e.clientX
+    mouseY = e.clientY
+  }
+ 
+  function mouseOut (e) {
+    mouseX = null
+    mouseY = null
+  }
+ 
+  function mouseClick () {
+    for (const dot of dots) dot.elastic()
+  }
+ 
+  class Dot {
+    constructor(x, y) {
+      this.x = x
+      this.y = y
+      this.speedX = Math.random() * 2 - 1
+      this.speedY = Math.random() * 2 - 1
+      this.follow = false
+    }
+    draw () {
+      ctx.beginPath()
+      ctx.arc(this.x, this.y, radius, 0, 2 * Math.PI)
+      ctx.fill()
+      ctx.closePath()
+    }
+    move () {
+      if (this.x >= width || this.x <= 0) this.speedX = -this.speedX
+      if (this.y >= height || this.y <= 0) this.speedY = -this.speedY
+      this.x += this.speedX
+      this.y += this.speedY
+      if (this.speedX >= 1) this.speedX--
+      if (this.speedX <= -1) this.speedX++
+      if (this.speedY >= 1) this.speedY--
+      if (this.speedY <= -1) this.speedY++
+      this.correct()
+      this.connectMouse()
+      this.draw()
+    }
+    correct () { // 根据鼠标的位置修正
+      if (!mouseX || !mouseY) return
+      let lengthX = mouseX - this.x
+      let lengthY = mouseY - this.y
+      const distance = Math.sqrt(lengthX ** 2 + lengthY ** 2)
+      if (distance <= followLength) this.follow = true
+      else if (this.follow === true && distance > followLength && distance <= followLength + 8) {
+        let proportion = followLength / distance
+        lengthX *= proportion
+        lengthY *= proportion
+        this.x = mouseX - lengthX
+        this.y = mouseY - lengthY
+      } else this.follow = false
+    }
+    connectMouse () { // 点与鼠标连线
+      if (mouseX && mouseY) {
+        let lengthX = mouseX - this.x
+        let lengthY = mouseY - this.y
+        const distance = Math.sqrt(lengthX ** 2 + lengthY ** 2)
+        if (distance <= connection) {
+          opacity = (1 - distance / connection) * 0.5
+          ctx.strokeStyle = `rgba(255,255,255,${opacity})`
+          ctx.beginPath()
+          ctx.moveTo(this.x, this.y)
+          ctx.lineTo(mouseX, mouseY);
+          ctx.stroke();
+          ctx.closePath()
+        }
+      }
+    }
+    elastic () { // 鼠标点击后的弹射
+      let lengthX = mouseX - this.x
+      let lengthY = mouseY - this.y
+      const distance = Math.sqrt(lengthX ** 2 + lengthY ** 2)
+      if (distance >= connection) return
+      const rate = 1 - distance / connection // 距离越小此值约接近1
+      this.speedX = 40 * rate * -lengthX / distance
+      this.speedY = 40 * rate * -lengthY / distance
+    }
+  }
+ 
+  function initDots (num) { // 初始化粒子
+    ctx.fillStyle = fillStyle
+    ctx.lineWidth = lineWidth
+    for (let i = 0; i < num; i++) {
+      const x = Math.floor(Math.random() * width)
+      const y = Math.floor(Math.random() * height)
+      const dot = new Dot(x, y)
+      dot.draw()
+      dots.push(dot)
+    }
+  }
+ 
+  function moveDots () { // 移动并建立点与点之间的连接线
+    ctx.clearRect(0, 0, width, height)
+    for (const dot of dots) {
+      dot.move()
+    }
+    for (let i = 0; i < dots.length; i++) {
+      for (let j = i; j < dots.length; j++) {
+        const distance = Math.sqrt((dots[i].x - dots[j].x) ** 2 + (dots[i].y - dots[j].y) ** 2)
+        if (distance <= connection) {
+          opacity = (1 - distance / connection) * 0.5
+          ctx.strokeStyle = `rgba(255,255,255,${opacity})`
+          ctx.beginPath()
+          ctx.moveTo(dots[i].x, dots[i].y)
+          ctx.lineTo(dots[j].x, dots[j].y);
+          ctx.stroke();
+          ctx.closePath()
+        }
+      }
+    }
+    animationFrame = window.requestAnimationFrame(moveDots)
+  }
+ 
+  addCanvasSize()
+ 
+  initDots(dotsNum)
+  moveDots()
+ 
+  document.onmousemove = mouseMove
+  document.onmouseout = mouseOut
+  document.onclick = mouseClick
+  window.onresize = addCanvasSize
+</script>
+
+
+</body>
+</html>

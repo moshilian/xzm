@@ -1,0 +1,517 @@
+<!DOCTYPE HTML>
+<html class="oxh met-web" >
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,minimal-ui">
+<meta name="format-detection" content="telephone=no">
+<title>GitHub</title>
+<link rel="shortcut icon" href="./images/xiao.jpg" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="./css/basic.css">
+
+<style>
+body{
+    background-color: black;
+    color: #FFF;
+}
+		.box1 {
+	float: right;
+	height: 200px;
+	width: 300px;
+			}
+			.loading{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin:
+            position: relative;
+            border:5px solid lightgreen;
+            -webkit-animation: turn 2s linear infinite;
+        }
+        .loading span{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: lightgreen;
+            position: absolute;
+            left: 50%;
+            margin-top: -15px;
+            margin-left: -15px;
+            
+        }
+        @-webkit-keyframes changeBgColor{
+            0%{
+                background: lightgreen;
+            }
+            100%{
+                background: lightblue;
+            }
+        }
+        @-webkit-keyframes turn{
+            0%{
+                -webkit-transform: rotate(0deg);
+                border-color: lightgreen;
+            }
+            100%{
+                -webkit-transform: rotate(360deg);
+                border-color: lightblue;
+            }
+        }
+.oxh.met-web body .met-foot-info.border-top1 {
+	color: #0FF;
+}
+ .box1{
+    height: 1080px;
+    width: 1920px;
+    background-image: url();
+    background-repeat: no-repeat;
+ }
+
+h1 {
+    font: bold 200% Consolas, Monaco, monospace;
+    border-right: 0.1em solid;
+    width: 16.5em;
+    width: 58ch;
+    margin: 2em 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(26, end),
+    cursor-blink 2.3s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes cursor-blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+:root {
+    --color-rect: #f6ed8d;
+    --color-circle: #7de3c8;
+    --color-notching: #ff1493;
+    --color-notching2: #f9d9e7;
+    --color-parallelogram: #03f463;
+}
+#content {
+    width: 360px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+}
+
+.g-multiple {
+  padding-top: 5px;
+    width: 100px;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.btn {
+ 
+    flex-shrink: 0;
+    width: 160px;
+    height: 64px;
+    line-height: 55px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    // filter: drop-shadow(0 0 5px #000);
+
+    &:hover {
+        top: -1px;
+    }
+    &:active {
+        top: 1px;
+    }
+
+    &.rect {
+        background: var(--color-rect);
+    }
+
+    &.circle {
+        border-radius: 64px;
+        background: var(--color-circle);
+    }
+    
+    &.parallelogram {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -20px;
+            bottom: 0;
+            right: -20px;
+            z-index: -1;
+            background: var(--color-parallelogram);
+            transform: skewX(15deg);
+        }
+    }
+    
+    &.trapezoid {
+        &::after {
+          content:"";
+          position: absolute;
+          top: 0; right: 0; bottom: 0; left: 0;
+          transform: perspective(40px) scaleY(1.3) rotateX(10deg);
+          transform-origin: bottom;
+          background: #ff9800;
+          z-index:-1;
+        }
+    }
+
+    &.notching {
+        background: 
+            linear-gradient(135deg, transparent 10px, #ff1493 0)top left,
+            linear-gradient(-135deg, transparent 10px, #ff1493 0) top right,
+            linear-gradient(-45deg, transparent 10px, #ff1493 0) bottom right,
+            linear-gradient(45deg, transparent 10px, #ff1493 0) bottom left;
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+    }
+    
+    &.diamond {
+        background: 
+            linear-gradient(135deg, transparent 22px, #bd1493 0)top left,
+            linear-gradient(-135deg, transparent 22px, #bd1493 0) top right,
+            linear-gradient(-45deg, transparent 22px, #bd1493 0) bottom right,
+            linear-gradient(45deg, transparent 22px, #bd1493 0) bottom left;
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    &.clip-notching {
+        background: linear-gradient(
+            45deg,
+            #f9d9e7,
+            #ff1493
+        );
+        clip-path: polygon(
+            15px 0,
+            calc(100% - 15px) 0,
+            100% 15px,
+            100% calc(100% - 15px),
+            calc(100% - 15px) 100%,
+            15px 100%,
+            0 calc(100% - 15px),
+            0 15px
+        );
+    }
+
+    &.arrow {
+        background: linear-gradient(
+                    -135deg,
+                    transparent 22px,
+                    #04e6fb 22px,
+                    #9006fb 100%
+                )
+                top right,
+            linear-gradient(
+                    -45deg,
+                    transparent 22px,
+                    #04e6fb 22px,
+                    #9006fb 100%
+                )
+                bottom right;
+        background-size: 100% 50%;
+        background-repeat: no-repeat;
+    }
+
+    &.two-arrow {
+        background: 
+            linear-gradient( -135deg, transparent 22%, #04e6fb 22%, #9006fb 78%, transparent 0) top right,
+            linear-gradient(-45deg, transparent 22%, #04e6fb 22%, #9006fb 78%, transparent 0) bottom right;
+        background-size: 100% 50%;
+        background-repeat: no-repeat;
+    }
+
+    &.clip-arrow {
+      
+        background: linear-gradient(45deg, #04e6fb, #65ff9a);
+        clip-path: polygon(
+            0 0,
+            30px 50%,
+            0 100%,
+            calc(100% - 30px) 100%,
+            100% 50%,
+            calc(100% - 30px) 0
+        );
+    }
+
+    &.inset-circle {
+        background-size: 70% 70%;
+        background-image: radial-gradient(
+                circle at 100% 100%,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            ),
+            radial-gradient(
+                circle at 0 0,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            ),
+            radial-gradient(
+                circle at 100% 0,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            ),
+            radial-gradient(
+                circle at 0 100%,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            );
+        background-repeat: no-repeat;
+        background-position: right bottom, left top, right top, left bottom;
+    }
+
+    &.mask-inset-circle {
+        background: linear-gradient(45deg, #2179f5, #e91e63);
+        mask: radial-gradient(
+                circle at 100% 100%,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            ),
+            radial-gradient(
+                circle at 0 0,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            ),
+            radial-gradient(
+                circle at 100% 0,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            ),
+            radial-gradient(
+                circle at 0 100%,
+                transparent 0,
+                transparent 12px,
+                #2179f5 13px
+            );
+        mask-repeat: no-repeat;
+        mask-position: right bottom, left top, right top, left bottom;
+        mask-size: 70% 70%;
+    }
+
+    &.skew {
+        position: relative;
+        width: 120px;
+        text-indent: 10px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: orange;
+            transform: skewX(15deg);
+            border-radius: 10px;
+            z-index: -1;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -13px;
+            width: 100px;
+            height: 64px;
+            border-radius: 10px;
+            background: orange;
+            z-index: -1;
+        }
+    }
+    
+    &.skew2 {
+        width: 120px;
+        position: relative;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, orange, #ff1800);
+            transform: skewX(15deg);
+            border-radius: 10px;
+            z-index: -1;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -13px;
+            width: 100px;
+            height: 64px;
+            border-radius: 10px;
+            background: orange;
+            z-index: -1;
+        }
+    }
+    
+    &.outside-circle {
+        position: relative;
+        background: #e91e63;
+        border-radius: 10px 10px 0 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: -20px;
+            bottom: 0;
+            background: #000;
+            background:radial-gradient(circle at 0 0, transparent 20px, #e91e63 21px);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -20px;
+            bottom: 0;
+            background: #000;
+            background:radial-gradient(circle at 100% 0, transparent 20px, #e91e63 21px);
+        }
+    }
+}
+    
+</style>
+<script>(function(){var t=navigator.userAgent;(t.indexOf("rv:11")>=0||t.indexOf("MSIE 10")>=0)&&document.write("<script src=\"public/plugins/html5shiv/html5shiv.min.js\"><\/script>")})();</script>
+<script src="https://www.metcms.cn/public/web/js/met_temdemo.js"></script></head>
+<!--[if lte IE 9]>        
+        <span aria-hidden="true">×</span>
+    </button>
+    你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank>升级您的浏览器</a>，以提高您的体验。</div>
+<![endif]-->
+<body >
+    <div style="position:absolute;z-index: -1;">
+        <canvas id="canvas"></canvas>
+        </div>
+<header class='met-head' m-id='met_head' m-type="head_nav">
+    <nav class="navbar navbar-default box-shadow-none met-nav">
+        <div class="container">
+            <div class="row">
+                <div class='qwe'>
+                  <h1 hidden>&nbsp;</h1>
+                                        <div class="navbar-header pull-xs-left">
+                        <a href="" class="met-logo vertical-align block pull-xs-left" title="Logo关键词">
+                            <div class="vertical-align-middle">
+                              <div align="left">
+                                <div class="loading">
+        <span></span></div>
+                              </div>
+                        </div>
+                        </a>
+                        <img src="./images/nanxi.jpg">
+                    </div>
+                    <button type="button" class="navbar-toggler hamburger hamburger-close collapsed p-x-5 p-y-0 met-nav-toggler" data-target="#met-nav-collapse" data-toggle="collapse"></button>
+              </div>
+                <div class="collapse navbar-collapse navbar-collapse-toolbar pull-md-right p-0" id='met-head-user-collapse'>
+              </div>
+                <div class="collapse navbar-collapse navbar-collapse-toolbar pull-md-right p-0" id="met-nav-collapse">
+                    <ul class="nav navbar-nav navlist">
+                        <li class='nav-item'>
+                            <a href="frit.html" title="网站首页" class="nav-link
+                                                            active
+                                                        ">网站首页</a>
+                        </li>
+                                                                            <li class="nav-item dropdown m-l-10">
+                                                            <a
+                                href="guanyu.html"
+                                title="关于我们"
+                                target='_self'                                class="nav-link dropdown-toggle "
+                                data-toggle="dropdown" data-hover="dropdown"
+                            >
+                                                        <span style='font-size:14px ;'>关于我们</span></span></a>
+                                                            <div class="dropdown-menu dropdown-menu-right animate animate-reverse"></div>
+                        </li>
+                                                                                                    <li class="nav-item dropdown m-l-10">
+                                                            <a
+                                href="jieshao.html"
+                                title="官网介绍"
+                                target='_self'                                class="nav-link dropdown-toggle "
+                                data-toggle="dropdown" data-hover="dropdown"
+                            >
+                                                       <span style='font-size:14px ;'>官网介绍</span></a>
+                                                            <div class="dropdown-menu dropdown-menu-right animate animate-reverse"></div>
+                        </li>
+                                                                                                    <li class="nav-item dropdown m-l-10">
+                                                            <a
+                                href="nxzl.html"
+                                title=""
+                                target='_self'                                class="nav-link dropdown-toggle "
+                                data-toggle="dropdown" data-hover="dropdown"
+                            >
+                        <span style='font-size:14px ;'>南溪资料</span></a></li>
+                                                                                                    <li class="nav-item dropdown m-l-10">
+                                                            <a
+                                href="xiaokl.html"	
+                                title=""
+                                target='_self'                                class="nav-link dropdown-toggle "
+                                data-toggle="dropdown" data-hover="dropdown"
+                            >
+                        <span style='font-size:14px ;'>Google恐龙</span></a></li>
+                        <div class="g-multiple">
+                    <li class="nav-item dropdown m-l-10">
+                     
+                                                            <a
+                                href="caidan.html"
+                                title=""
+                                target='_self'                              
+                            >
+                        <span style='font-size:14px ;'>
+                       
+                          <div class="btn clip-arrow">GitHub</div>
+                        </div></span></a></li>
+                  </ul>
+                    <div class="metlang m-l-15 pull-md-right"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+<!-- 产品区块 --><!-- 简介区块 --><!-- 文章区块 --><!-- 图片区块 --></main>
+<footer class='met-foot-info border-top1' m-id='met_foot' m-type="foot">
+  </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae53144d9b0b29e4dce621c970c016e0";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  	
+</div>
+</div>
+
+<h1> 感谢你打开了这个网站，同时也祝你事业成功，学业有成-----星之鸣</h1>
+</div>
+</body>
+</html>
